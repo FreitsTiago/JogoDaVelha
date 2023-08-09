@@ -1,5 +1,13 @@
+:root{
+  --dark: #0A0C0D;
+  --light: #f2f2f2;
+  --color_1: #348e91;
+  --color_2: #1c5052;
+  --color_3: #213635;
+}
+
 .container {
-  background-color: #121619;
+  background-color: var(--dark);
   display: flex;
   height: 100vh;
   justify-content: center;
@@ -9,32 +17,26 @@
 
 .scoreboard {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   width: 100%;
 }
 
-.scoreboard h1{
-  display: flex;
-  font-family: Arial, Helvetica, sans-serif ;
-  color: #EDFBFF;
-  margin: 0;
-  align-items: center;
-}
-
 .scoreboard div {
-  border: 2px solid #EDFBFF;
+  margin-inline: 10px;
+  border: 2px solid var(--light);
   border-radius: 8px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   width: 15vw;
+  max-width: 130px;
   transition: 1s;
 }
 
 .scoreboard .playit {
-  border-color: #00CAC7;
-  box-shadow: 0 0 15px #00CAC7;
+  border-color: var(--color_1);
+  box-shadow: 0 0 15px var(--color_1);
 }
 
 .scoreboard div img {
@@ -45,7 +47,7 @@
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
   margin-right: 5px;
-  color: #EDFBFF;
+  color: var(--light);
 }
 
 .desable {
@@ -54,7 +56,7 @@
 
 .game_table {
   margin-top: 30px;
-  background-color: #EDFBFF;
+  background-color: var(--light);
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 1vh;
@@ -67,7 +69,7 @@
   align-items: center;
   font-size: 6rem;
   border: none;
-  background-color: #121619;
+  background-color: var(--dark);
   height: 15vh;
   aspect-ratio: 1 / 1;
   cursor: pointer;
@@ -88,18 +90,18 @@
 
 .action_board button {
   font-family: Arial, Helvetica, sans-serif;
-  border: 2px solid #EDFBFF;
+  border: 2px solid var(--light);
   border-radius: 8px;
-  background-color: #121619;
-  color: #EDFBFF;
+  background-color: var(--dark);
+  color: var(--light);
   font-size: 1.5rem;
   transition: .5s;
 }
 
 .action_board button:hover {
-  color: #00CAC7;
-  border-color: #00CAC7;
-  box-shadow: 0 0 8px #00CAC7;
+  color: var(--color_1);
+  border-color: var(--color_1);
+  box-shadow: 0 0 8px var(--color_1);
 }
 
 .winnerBanner {
@@ -114,7 +116,7 @@
   margin: 0;
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
-  color: #EDFBFF;
+  color: var(--light);
   font-size: 1.5rem;
   transition: .5s;
 }
