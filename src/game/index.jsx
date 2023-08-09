@@ -43,15 +43,15 @@ function Game() {
         setWinner('X')
         setScore([score[0] + 1, score[1]])
         l_winner = true
-      } 
+      }
     })
 
-    if(!l_winner) {
+    if (!l_winner) {
       let couter = 0
       board.forEach(cell => {
-        if(cell !== '') couter ++
+        if (cell !== '') couter++
       })
-      if(couter === 9) {
+      if (couter === 9) {
         setWinner('EMPATE')
       }
     }
@@ -67,6 +67,9 @@ function Game() {
 
   return (
     <div className='container'>
+      <header>
+        <h1>Jogo da Velha</h1>
+      </header>
       <div className='scoreboard'>
         <div className={currentPlayer === 'X' && winner === '' ? 'playit' : ''}>
           <img src={X} />
@@ -93,7 +96,9 @@ function Game() {
           <img src={winner === 'X' ? X : winner === 'O' ? O : ''} />
         </div>
       }
-
+      <footer>
+        <h6>© 2023 <a href="https://www.instagram.com/freitstiago" target='_blanck'>T1460 Freitas</a></h6>
+      </footer>
     </div>
   )
 }
